@@ -1,8 +1,6 @@
 .force-container h1{
     text-align: center;
-    background-color: rgba(0, 255, 255, .3);
-    padding: 30px 0px;
-    color: rgb(126, 2, 241);
+    color: #7e02f1;
 }
 .force-value{
     background: none;
@@ -12,5 +10,9 @@
     font-size: 20px;
 }
 .result-container{
-    margin-top: 30px;
+    margin-top: 50px;
+}
+
+.force-data select{
+    width: 150px;
 }

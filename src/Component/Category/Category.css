@@ -1,0 +1,18 @@
+.category-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    border-radius: 10px;
+    background-color: rgb(237, 238, 230);
+    font-size: 20px;
+}
+a{
+    color: #000;
+}
+.category-card:hover{
+    background-color: #9fdd24;
+    transition: all .3s;
+    text-decoration: none;
+    color: rgb(53, 48, 9);
+}
