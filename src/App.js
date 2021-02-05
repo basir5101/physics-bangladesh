@@ -14,7 +14,7 @@ function App() {
   return (
     <Router >
       <Switch>
-        <Route exact path to='/'>
+        <Route exact path='/'>
           <Home />
         </Route>
         <Route path='/force' >
@@ -23,7 +23,7 @@ function App() {
         <Route path='/velocity' >
           <Velocity />
         </Route>
-        <Route to='/acceleration'>
+        <Route path='/acceleration'>
           <Acceleration />
         </Route>
       </Switch>

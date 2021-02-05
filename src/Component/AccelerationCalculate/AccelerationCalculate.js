@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { FormControl, InputGroup } from 'react-bootstrap';
+import DistanceTravel from './DistanceTravel';
+import MassAndForce from './MassAndForce';
 import SpeedDifference from './SpeedDifference';
 
 const AccelerationCalculate = () => {
@@ -45,6 +47,12 @@ const AccelerationCalculate = () => {
             <div>
                 {
                     speed && <SpeedDifference />
+                }
+                {
+                    distance && <DistanceTravel />
+                }
+                {
+                    massAndForce && <MassAndForce />
                 }
             </div>
         </div>

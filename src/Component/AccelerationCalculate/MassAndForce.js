@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FormControl, InputGroup } from 'react-bootstrap';
 
-const SpeedDifference = () => {
+const MassAndForce = () => {
     const [initialVelocityUnit, setInitialVelocityUnit] = useState('m/s');
     const [finalVelocityUnit, setFinalVelocityUnit] = useState('m/s');
     const [initialSpeed, setInitialSpeed] = useState(null);
@@ -78,7 +78,7 @@ const SpeedDifference = () => {
     }
     return (
         <div className='container mt-4'>
-            <h4 className='text-center'> বেগের পার্থক্য দেওয়া আছে </h4>
+            <h4 className='text-center'> ভর এবং বল দেওয়া আছে </h4>
             <div className="force-data container mt-4 mx-auto row">
                 <InputGroup className="mb-3 col-md-6">
                     <FormControl
@@ -138,4 +138,4 @@ const SpeedDifference = () => {
     );
 };
 
-export default SpeedDifference;
+export default MassAndForce;
