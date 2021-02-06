@@ -63,7 +63,7 @@ const Force = () => {
         <div className='force-container'>
             <div className="bg-header d-flex justify-content-around">
                 <Link to='/'> <img src={logo} alt="" /></Link>
-                <h1> ত্বরন নির্নয়</h1>
+                <h1> বলের মান নির্নয়</h1>
             </div>
             <div className="force-data container mt-4 mx-auto row">
                 <InputGroup className="mb-3 col-md-4">

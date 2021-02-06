@@ -18,6 +18,26 @@ const Category = () => {
             name: 'বলের মান নির্নয়',
             link: '/force'
         },
+        {
+            name: 'কাজ নির্নয়',
+            link: '/work'
+        },
+        {
+            name: 'ক্ষমতা নির্নয়',
+            link: '/power'
+        },
+        {
+            name: 'চাপ নির্নয়',
+            link: '/pressure'
+        },
+        {
+            name: 'ঘনত্ব',
+            link: 'density'
+        },
+        {
+            name: 'প্লবতা',
+            link: 'buoyancy'
+        },
 
     ]
 
