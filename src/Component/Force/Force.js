@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Force.css';
 import { FormControl, InputGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import logo from '../../images/physics.png';
 
 const Force = () => {
     const [massUnit, setMassUnit] = useState('kg');
@@ -59,7 +61,10 @@ const Force = () => {
     }
     return (
         <div className='force-container'>
-            <h1 className='bg-header'> বল নির্নয় </h1>
+            <div className="bg-header d-flex justify-content-around">
+                <Link to='/'> <img src={logo} alt="" /></Link>
+                <h1> ত্বরন নির্নয়</h1>
+            </div>
             <div className="force-data container mt-4 mx-auto row">
                 <InputGroup className="mb-3 col-md-4">
                     <FormControl

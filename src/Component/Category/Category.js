@@ -1,6 +1,7 @@
 import React from 'react';
 import './Category.css';
 import { Link } from 'react-router-dom';
+import logo from '../../images/physics.png'
 
 const Category = () => {
 
@@ -23,7 +24,10 @@ const Category = () => {
 
     return (
         <div className=''>
-            <h2 className='bg-header'> পদার্থ বিজ্ঞান ক্যালকুলেশন </h2>
+            <div className="bg-header d-flex justify-content-around">
+                <Link to='/'> <img src={logo} alt="" /></Link>
+                <h1> পদার্থবিজ্ঞান ক্যালকুলেশন </h1>
+            </div>
             <div className="row container mx-auto">
                 {
                     categoryList.map(category => (
