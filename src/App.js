@@ -14,6 +14,8 @@ import Work from './Pages/Work/Work';
 import Power from './Pages/Power/Power';
 import Density from './Pages/Density/Density';
 import Buoyancy from './Pages/Buoyancy/Buoyancy';
+import KineticEnergy from './Pages/KineticEnergy/KineticEnergy';
+import PotentialEnergy from './Pages/PotentialEnergy/PotentialEnergy';
 
 function App() {
   return (
@@ -33,6 +35,12 @@ function App() {
         </Route>
         <Route path='/work' >
           <Work />
+        </Route>
+        <Route path='/kinetic-energy'>
+          <KineticEnergy />
+        </Route>
+        <Route path='/potential-energy'>
+          <PotentialEnergy />
         </Route>
         <Route path='/power'>
           <Power />

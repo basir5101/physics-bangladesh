@@ -23,6 +23,14 @@ const Category = () => {
             link: '/work'
         },
         {
+            name: 'গতিশক্তি নির্নয়',
+            link: '/kinetic-energy'
+        },
+        {
+            name: 'বিভব শক্তি নির্নয়',
+            link: '/potential-energy'
+        },
+        {
             name: 'ক্ষমতা নির্নয়',
             link: '/power'
         },
@@ -46,7 +54,7 @@ const Category = () => {
         <div className=''>
             <div className="bg-header d-flex justify-content-around">
                 <Link to='/'> <img src={logo} alt="" /></Link>
-                <h1> পদার্থবিজ্ঞান ক্যালকুলেশন </h1>
+                <h4> পদার্থবিজ্ঞান ক্যালকুলেশন </h4>
             </div>
             <div className="row container mx-auto">
                 {

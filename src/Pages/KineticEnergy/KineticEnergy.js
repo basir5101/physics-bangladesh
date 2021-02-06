@@ -3,19 +3,18 @@ import { FormControl, InputGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../images/physics.png'
 
-const Buoyancy = () => {
+const KineticEnergy = () => {
     const [forceUnit, setForceUnit] = useState('m/s');
     const [massUnit, setMassUnit] = useState('m/s');
-    const [volume, setVolume] = useState(null);
-    const [density, setTime] = useState(null);
-    const [acceleration, setAcceleration] = useState(null);
+    const [work, setWork] = useState(null);
+    const [time, setTime] = useState(null);
     const [accelerationUnit, setAccelerationUnit] = useState('ms^-1');
 
     const accelerationValue = e => {
-        if (e.target.name === 'volume') {
-            setVolume(e.target.value)
+        if (e.target.name === 'work') {
+            setWork(e.target.value)
         }
-        if (e.target.name === 'density') {
+        if (e.target.name === 'time') {
             setTime(e.target.value)
         }
 
@@ -23,29 +22,29 @@ const Buoyancy = () => {
 
     const forceChange = e => {
         if (e.target.value === 'cm/s' && forceUnit === 'm/s') {
-            setVolume(volume / 100)
+            setWork(work / 100)
             setForceUnit('cm/s')
         }
         if (e.target.value === 'm/s' && forceUnit === 'cm/s') {
-            setVolume(volume * 100)
+            setWork(work * 100)
             setForceUnit('m/s')
         }
     }
 
     const massChange = e => {
+        if (!e.target.value) {
+            setMassUnit('m/s')
+        }
         if (e.target.value === 'cm/s' && massUnit === 'm/s') {
-            setTime(density / 100)
+            setTime(time / 100)
             setMassUnit('cm/s')
         }
         if (e.target.value === 'm/s' && massUnit === 'cm/s') {
-            setTime(density * 100)
+            setTime(time * 100)
             setMassUnit('m/s')
         }
     }
 
-    const accelerationChange = e => {
-        setAcceleration(e.target.value)
-    }
     const handleUnit = e => {
         if (e.target.value === 'cms^-1') {
             if (accelerationUnit === 'ms^-1') {
@@ -62,54 +61,42 @@ const Buoyancy = () => {
         <div>
             <div className="bg-header d-flex justify-content-around">
                 <Link to='/'> <img src={logo} alt="" /></Link>
-                <h1> প্লবতা নির্নয়</h1>
+                <h1> গতিশক্তি নির্নয়</h1>
             </div>
-            <div className="volume-data container mt-4 mx-auto row">
+            <div className="work-data container mt-4 mx-auto row">
                 <InputGroup className="mb-3 col-md-6">
                     <FormControl
-                        onChange={accelerationValue} pattern="\d*" name='volume' type="number" placeholder='আয়তন'
+                        onChange={accelerationValue} pattern="\d*" name='work' type="number" placeholder='ভর'
                     />
                     <InputGroup.Append>
                         {
-                            volume &&
+                            work &&
                             <select onChange={forceChange}>
-                                <option value="J">m^3 (মিটার^3)</option>
+                                <option value="J">kg (কেজি) </option>
                             </select>
                         }
                     </InputGroup.Append>
                 </InputGroup>
                 <InputGroup className="mb-3 col-md-6">
                     <FormControl
-                        onChange={accelerationValue} name='density' type="number" placeholder='ঘনত্ব'
+                        onChange={accelerationValue} name='time' type="number" placeholder='বেগ'
                     />
                     <InputGroup.Append>
                         {
-                            density && <select onChange={massChange}>
-                                <option value="s"> kg/m^3(কেজি/মিটার^3) </option>
-                            </select>
-                        }
-                    </InputGroup.Append>
-                </InputGroup>
-                <InputGroup className="mb-3 col-md-6">
-                    <FormControl
-                        onChange={accelerationChange} name='density' type="number" placeholder='অভিকর্ষজ ত্বরণ'
-                    />
-                    <InputGroup.Append>
-                        {
-                            density && <select onChange={accelerationChange}>
-                                <option value="s"> ms^-2 (মিটার/সেকেন্ড^2) </option>
+                            time && <select onChange={massChange}>
+                                <option value="s">m/s  (মিটার/সেকেন্ড) </option>
                             </select>
                         }
                     </InputGroup.Append>
                 </InputGroup>
                 <InputGroup className="mb-3 col-md-8">
                     <FormControl
-                        disabled placeholder='প্লবতা' type="number" defaultValue={volume && density && acceleration && (volume * density * acceleration)}
+                        disabled placeholder='গতিশক্তি' type="number" defaultValue={work && time && ((work * time * time) / 2)}
                     />
                     <InputGroup.Append>
                         {
-                            volume && <select onChange={handleUnit} name="select" id="">
-                                <option value="W"> N (নিউটন) </option>
+                            work && <select onChange={handleUnit} name="select" id="">
+                                <option value="W"> J ( জুল) </option>
                             </select>
                         }
                     </InputGroup.Append>
@@ -120,4 +107,4 @@ const Buoyancy = () => {
 };
 
 
-export default Buoyancy;
+export default KineticEnergy;

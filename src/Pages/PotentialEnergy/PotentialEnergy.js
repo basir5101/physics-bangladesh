@@ -3,7 +3,7 @@ import { FormControl, InputGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../images/physics.png'
 
-const Buoyancy = () => {
+const PotentialEnergy = () => {
     const [forceUnit, setForceUnit] = useState('m/s');
     const [massUnit, setMassUnit] = useState('m/s');
     const [volume, setVolume] = useState(null);
@@ -62,30 +62,18 @@ const Buoyancy = () => {
         <div>
             <div className="bg-header d-flex justify-content-around">
                 <Link to='/'> <img src={logo} alt="" /></Link>
-                <h1> প্লবতা নির্নয়</h1>
+                <h1> বিভব শক্তি নির্নয়</h1>
             </div>
             <div className="volume-data container mt-4 mx-auto row">
                 <InputGroup className="mb-3 col-md-6">
                     <FormControl
-                        onChange={accelerationValue} pattern="\d*" name='volume' type="number" placeholder='আয়তন'
+                        onChange={accelerationValue} pattern="\d*" name='volume' type="number" placeholder='ভর'
                     />
                     <InputGroup.Append>
                         {
                             volume &&
                             <select onChange={forceChange}>
-                                <option value="J">m^3 (মিটার^3)</option>
-                            </select>
-                        }
-                    </InputGroup.Append>
-                </InputGroup>
-                <InputGroup className="mb-3 col-md-6">
-                    <FormControl
-                        onChange={accelerationValue} name='density' type="number" placeholder='ঘনত্ব'
-                    />
-                    <InputGroup.Append>
-                        {
-                            density && <select onChange={massChange}>
-                                <option value="s"> kg/m^3(কেজি/মিটার^3) </option>
+                                <option value="J">kg (কেজি)</option>
                             </select>
                         }
                     </InputGroup.Append>
@@ -102,6 +90,18 @@ const Buoyancy = () => {
                         }
                     </InputGroup.Append>
                 </InputGroup>
+                <InputGroup className="mb-3 col-md-6">
+                    <FormControl
+                        onChange={accelerationValue} name='density' type="number" placeholder='উচ্চতা'
+                    />
+                    <InputGroup.Append>
+                        {
+                            density && <select onChange={massChange}>
+                                <option value="s"> m(মিটার) </option>
+                            </select>
+                        }
+                    </InputGroup.Append>
+                </InputGroup>
                 <InputGroup className="mb-3 col-md-8">
                     <FormControl
                         disabled placeholder='প্লবতা' type="number" defaultValue={volume && density && acceleration && (volume * density * acceleration)}
@@ -109,7 +109,7 @@ const Buoyancy = () => {
                     <InputGroup.Append>
                         {
                             volume && <select onChange={handleUnit} name="select" id="">
-                                <option value="W"> N (নিউটন) </option>
+                                <option value="W"> J (জুল) </option>
                             </select>
                         }
                     </InputGroup.Append>
@@ -120,4 +120,5 @@ const Buoyancy = () => {
 };
 
 
-export default Buoyancy;
+
+export default PotentialEnergy;
