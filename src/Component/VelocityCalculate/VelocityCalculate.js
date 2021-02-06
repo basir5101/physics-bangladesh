@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FormControl, InputGroup } from 'react-bootstrap';
 import VelocityDetails from './VelocityDetails';
+import velocity from '../../images/velocity.png'
 
 const VelocityCalculate = () => {
     const [distanceUnit, setDistanceUnit] = useState('m');
@@ -60,6 +61,9 @@ const VelocityCalculate = () => {
     return (
         <div className=''>
             <h1 className='bg-header'> বেগ নির্নয় </h1>
+            <div className="text-center">
+                <img src={velocity} alt="" />
+            </div>
             <div className="container row mx-auto">
                 <InputGroup className="mb-3 col-md-4">
                     <FormControl

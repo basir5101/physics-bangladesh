@@ -46,7 +46,10 @@ const Category = () => {
             name: 'প্লবতা',
             link: 'buoyancy'
         },
-
+        {
+            name: 'তাপমাত্রা স্কেল',
+            link: 'temperature-scale'
+        },
     ]
 
 
@@ -56,14 +59,16 @@ const Category = () => {
                 <Link to='/'> <img src={logo} alt="" /></Link>
                 <h4> পদার্থবিজ্ঞান ক্যালকুলেশন </h4>
             </div>
-            <div className="row container mx-auto">
+            <div className="row container  mx-auto">
                 {
                     categoryList.map(category => (
-                        <Link to={`${category.link}`} className="col-md-4 my-3 text-center category-card border-left">
-                            <div>
-                                <p> {category.name} </p>
-                            </div>
-                        </Link>
+                        <div className="col-md-4 col-md-4 my-3 text-center border-left">
+                            <Link to={`${category.link}`} className="category-card">
+                                <div>
+                                    <p> {category.name} </p>
+                                </div>
+                            </Link>
+                        </div>
                     ))
                 }
             </div>
