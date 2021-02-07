@@ -16,6 +16,8 @@ import Density from './Pages/Density/Density';
 import Buoyancy from './Pages/Buoyancy/Buoyancy';
 import KineticEnergy from './Pages/KineticEnergy/KineticEnergy';
 import PotentialEnergy from './Pages/PotentialEnergy/PotentialEnergy';
+import ChallengeSCC from './Pages/ChallengeSSC/ChallengeSCC';
+import FirstDayScc from './Pages/FirstDaySSC/FirstDayScc';
 
 function App() {
   return (
@@ -23,6 +25,12 @@ function App() {
       <Switch>
         <Route exact path='/'>
           <Home />
+        </Route>
+        <Route path='/challenge-ssc'>
+          <ChallengeSCC />
+        </Route>
+        <Route path='/first-day-ssc'>
+          <FirstDayScc />
         </Route>
         <Route path='/velocity' >
           <Velocity />

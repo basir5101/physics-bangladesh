@@ -60,6 +60,13 @@ const Category = () => {
                 <h4> পদার্থবিজ্ঞান ক্যালকুলেশন </h4>
             </div>
             <div className="row container  mx-auto">
+                <div className="col-md-12 col-md-4 my-3 text-center border-left">
+                    <Link to='/challenge-ssc' className="category-card">
+                        <div>
+                            <p> 30 দিনের চ্যালেঞ্জ (SSC) </p>
+                        </div>
+                    </Link>
+                </div>
                 {
                     categoryList.map(category => (
                         <div className="col-md-4 col-md-4 my-3 text-center border-left">
