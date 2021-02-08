@@ -19,10 +19,10 @@ const FirstQuiz = () => {
     }
 
     return (
-        <div>
+        <div className="bg-warning p-4">
             {
                 showScore ? (
-                    <div className="border-left pl-2">
+                    <div>
                         <p className="">Your score {score} out of {firstDayQuiz.length}</p>
                     </div>
                 ) : (
