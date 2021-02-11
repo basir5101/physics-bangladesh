@@ -38,7 +38,7 @@ const FirstQuiz = () => {
                                 {
                                     firstDayQuiz && firstDayQuiz[currentQuestion].answerOptions.map(option => {
                                         return <ul>
-                                            <li className='form-control' onClick={() => handleOptionClick(option.isCorrect)}> {option.answer} </li>
+                                            <li className='bg-dark text-white p-4' onClick={() => handleOptionClick(option.isCorrect)}> {option.answer} </li>
                                         </ul>
                                     })
                                 }

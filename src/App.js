@@ -18,6 +18,7 @@ import KineticEnergy from './Pages/KineticEnergy/KineticEnergy';
 import PotentialEnergy from './Pages/PotentialEnergy/PotentialEnergy';
 import ChallengeSCC from './Pages/ChallengeSSC/ChallengeSCC';
 import FirstDayScc from './Pages/FirstDaySSC/FirstDayScc';
+import SecondDaySSC from './Pages/SecondDaySSC/SecondDaySSC';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
         </Route>
         <Route path='/first-day-ssc'>
           <FirstDayScc />
+        </Route>
+        <Route path='/second-day-ssc'>
+          <SecondDaySSC />
         </Route>
         <Route path='/velocity' >
           <Velocity />
