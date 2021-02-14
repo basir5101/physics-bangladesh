@@ -12,10 +12,6 @@ const ChallengeSCC = () => {
             name: '২য় দিন',
             link: '/second-day-ssc'
         },
-        {
-            name: '৩য় দিন',
-            link: '/third-day-ssc'
-        },
     ]
     return (
         <div>

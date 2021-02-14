@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import FirstQuiz from './FirstQuiz';
 
 const FirstDayScc = () => {
-    const [showQuiz, setShowQuiz] = useState(false);
-    const handleShowQuiz = e => {
-        setShowQuiz(true);
-    }
     return (
         <div className='mt-5 container'>
             <h3 className='text-center'> প্রথম দিন </h3>
@@ -53,10 +49,7 @@ const FirstDayScc = () => {
                 </table>
             </div>
             <div>
-                {
-                    showQuiz ? <FirstQuiz /> :
-                        <button className='btn btn-success' onClick={handleShowQuiz}>Start Quiz</button>
-                }
+                <FirstQuiz />
             </div>
         </div>
     );

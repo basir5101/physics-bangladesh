@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import VelocityQuiz from '../../quiz/VelocityQuiz';
 import logo from '../../images/physics.png';
 import { Link } from 'react-router-dom';
-import VelocityDetails from '../../Component/VelocityCalculate/VelocityDetails';
 import { Check } from 'react-feather';
 
 const SecondDaySSC = () => {
